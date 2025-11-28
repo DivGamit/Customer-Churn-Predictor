@@ -1,1 +1,8 @@
+# Streamlit
+.streamlit/
+secrets.toml
+
+# Python junk
+__pycache__/
+*.pyc
 
