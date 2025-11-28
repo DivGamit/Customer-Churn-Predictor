@@ -3,14 +3,14 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
 def train_on_uploaded_data(df):
-    # Auto-find churn column
+    
     target_cols = [c for c in df.columns if "churn" in c.lower() or "leave" in c.lower() or "exit" in c.lower()]
     if not target_cols:
         st.error("No churn column found. Name it something like 'Churn', 'WillLeave', etc.")
         return None
     target = target_cols[0]
 
-    # Clean target column
+    
     def clean_churn(val):
      if pd.isna(val):
         return None
@@ -65,7 +65,7 @@ if uploaded_file:
         st.success("Predictions ready!")
         st.balloons()
 
-        # Results
+        
         col1, col2 = st.columns(2)
         with col1:
             st.metric("Total Customers", len(df))
@@ -80,7 +80,7 @@ if uploaded_file:
               .style.background_gradient(cmap="Reds", subset=["Churn_Probability"])
         )
 
-        # Download
+        
         csv = df.to_csv(index=False).encode()
         st.download_button(
             "Download Full Predictions CSV",
@@ -88,4 +88,5 @@ if uploaded_file:
             "churn_predictions.csv",
             "text/csv",
             use_container_width=True
+
         )
