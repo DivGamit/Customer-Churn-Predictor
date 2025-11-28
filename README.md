@@ -1,6 +1,6 @@
 # Customer-Churn-Predictor
 Customer Churn Predictor – Streamlit | Python | Pandas | Scikit-learn  
-Built a production-ready web app that accepts any customer CSV, auto-cleans & encodes features, trains Random Forest model on-the-fly, and returns churn predictions with downloadable results. Deployed on Streamlit Cloud. Used by recruiters in live interviews.
+Built a production-ready web app that accepts any customer CSV, auto-cleans & encodes features, trains Random Forest model on-the-fly, and returns churn predictions with downloadable results. Deployed on Streamlit Cloud.
 
 - Upload any customer CSV (any columns, any format)  
 - Auto-detects churn column & cleans Yes/No/1/0/True automatically  
