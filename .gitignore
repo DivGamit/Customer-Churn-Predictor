@@ -1,6 +1,5 @@
 # Streamlit
 .streamlit/
-secrets.toml
 
 # Python junk
 __pycache__/
